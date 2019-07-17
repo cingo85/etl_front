@@ -278,6 +278,11 @@
 
         });
 
+        $("td").click(function(){
+            console.log($(this).text());
+            window.location.href='./project.html';
+        });
+
         $('#datasource').change(function(){
             var s = $('#datasource option:selected').val();
             if($('#selectdatasourceDiv').hasClass('col-md-10')){
