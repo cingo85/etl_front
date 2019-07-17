@@ -1,0 +1,315 @@
+<!--
+*
+*  INSPINIA - Responsive Admin Theme
+*  version 2.9.2
+*
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>INSPINIA | Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+ 
+
+       
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+                <div class="form-group">
+                   <h3>ETL清洗程式</h3>
+                </div>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li style="padding: 20px">
+                    <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+                <li>
+                    <a class="right-sidebar-toggle">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+        <div class="wrapper wrapper-content">
+                    <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                    <h2>嘉義大學第三期</h2>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                    <button type="button" class="btn btn-primary" style="margin-left: 850px">回專案清單</button>
+                                            </div>
+                                        </div>
+                                        <div class="row">    
+                                            <div class="col-lg-3">
+                                                <button type="button" class="btn btn-primary">資料統計表</button>
+                                                <button type="button" class="btn btn-primary">匯出設定檔</button>
+                                                <button type="button" class="btn btn-primary">編輯基本資料</button>
+                                            </div>
+                                        </div>    
+                                    </div>
+                                    <div class="ibox-content">
+                                        <div class="row">
+                                            <div class="col-lg-12" style="padding-left:500px">資料來源:</div>
+                                            <div class="col-lg-12" style="padding-left:557px">SQL 139.125.222.89</div>
+                                            <div class="col-lg-12" style="padding-left:557px">CSV 139.125.222.89</div>
+                                        </div>
+                                        <div class="row">   
+                                            <div class="col-lg-4"  style="padding-left:500px">保固期限:</div>
+                                            <div class="col-lg-2" >2017/03/07</div>
+                                            <div class="col-lg-1">驗收日期:</div>
+                                            <div class="col-lg-5">2017/03/07</div>
+                                        </div>    
+                                            <div class="col-lg-12" style="padding-left:485px">備註:</div>
+                                        </div>    
+                                    </div>   
+                                    <div class="ibox-content">
+                                        <div class="row">
+                                               <h3 style="margin-left: 650px">DS表格清單</h3><input type="text" style="margin-right: 100px;margin-left:30px;width: 30%" xclass="form-control col-lg-6" id="filter" placeholder="Search">
+                                        </div>
+                                        <div style="margin: 5px"></div>
+                                        <table class="footable table" data-filter=#filter style="margin:auto;width: 50%">
+                                            <thead>
+                                            <tr>
+                                                <th>表單名稱</th>
+                                                <th>版本</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>嘉義大學-第三期</td>
+                                                <td>嘉義大學</td>
+                                            </tr>
+                                            <tr>
+                                                <td>台灣首府大學</td>
+                                                <td>台灣首府大學</td>
+                                            </tr>
+                                            <tr>
+                                                <td>國立高雄大學</td>
+                                                <td>國立高雄大學</td> 
+                                            </tr>
+                                            <tr>
+                                                <td>交通大學</td>
+                                                <td>交通大學</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+          
+                   
+        <div id="modal-form" class="modal fade bd-modal-lg" aria-hidden="true" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                       <h3 class="m-t-none m-b">建立新專案</h3>
+                       <form class="form-inline">
+                            
+                                <div class="form-group col-md-2">
+                                        <label for="staticEmail2">專案名稱</label>
+                                </div>
+                                <div class="form-group col-md-4">
+                                        <label for="inputPassword2" class="sr-only"></label>
+                                        <input type="text" class="form-control" id="inputPassword2">
+                                </div>
+                                <div class="form-group col-md-2">
+                                        <label for="staticEmail2">客戶名稱</label>
+                                </div>
+                                <div class="form-group col-md-4">
+                                        <label for="inputPassword2" class="sr-only"></label>
+                                        <input type="text" class="form-control" id="inputPassword2">
+                                </div>
+                     
+                              
+                                <div class="form-group col-md-2">
+                                        <label for="staticEmail2">驗收日期</label>
+                                </div>
+                                <div class="form-group col-md-4">
+                                        <div class="input-group date">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="date" class="form-control" value="03/04/2014">
+                                        </div>
+                                </div>
+                                <div class="form-group col-md-2">
+                                        <label for="staticEmail2">保固期限</label>
+                                </div>
+                                <div class="form-group col-md-4">
+                                        <div class="input-group date">
+                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="date" class="form-control" value="03/04/2014">
+                                        </div>
+                                </div>
+                           
+                             
+                                <div class="form-group col-md-2">
+                                        <label for="staticEmail2">資料來源</label>
+                                </div>
+                                <div id="selectdatasourceDiv" class="form-group col-md-10" >
+                                        <label for="inputPassword2" class="sr-only"></label>
+                                        <select class="custom-select" id="datasource">
+                                            <option value="">請選擇</option>
+                                            <option value="database">資料庫</option>
+                                            <option value="datafolder">資料夾</option>
+                                        </select>
+                                </div>
+                        
+                            
+                                <div class="form-group col-md-2">
+                                        <label for="staticEmail2">備註</label>
+                                </div>
+                                <div class="form-group col-md-10">
+                                        <label for="inputPassword2" class="sr-only">Password</label>
+                                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="2"></textarea>
+                                </div>
+
+                                <div class="form-group row">
+                                        <div class="col-sm-4 col-sm-offset-2">
+                                            <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+                                        </div>
+                                </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2018
+            </div>
+        </div>
+        
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+
+    <!-- Data picker -->
+   <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+    
+            //全文檢索            
+           $('.footable').footable();
+
+        });
+
+        $('#datasource').change(function(){
+            var s = $('#datasource option:selected').val();
+           if(s==='database') {
+            $('#databaseIP').remove();
+            $('#databaseAccount').remove();
+            $('#databasePassword').remove();
+            $('#datafolderPath').remove();
+            $('#databaseDescription').remove();
+            $('#datafolderDescription').remove();
+            $("button[name='plus']").remove();
+
+            $('#selectdatasourceDiv').toggleClass('col-md-10 col-md-1')
+            .after(
+                '<div class="form-group col-md-2"><input type="text" placeholder="資料庫IP" class="form-control" id="databaseIP"></div>'
+               +'<div class="form-group col-md-2"><input type="text" placeholder="資料庫帳號" class="form-control" id="databaseAccount"></div>'
+               +'<div class="form-group col-md-2"><input type="text" placeholder="資料庫密碼" class="form-control" id="databasePassword"></div>'
+               +'<div class="form-group col-md-2"><input type="text" placeholder="資料庫說明" class="form-control" id="databaseDescription"></div>');
+               +'<div class="form-group col-md-1"><button type="button" class="btn btn-success" name="plus">+</button></div>'
+           }else if(s==='datafolder'){
+               $('#datafolderPath').remove();
+               $('#databaseIP').remove();
+               $('#databaseAccount').remove();
+               $('#databasePassword').remove();
+               $('#databaseDescription').remove();
+               $('#datafolderDescription').remove();
+               $("button[name='plus']").remove();
+
+               $('#selectdatasourceDiv').toggleClass('col-md-10 col-md-1').after(
+                '<div class="form-group col-md-6"><input type="text" class="form-control" id="datafolderPath"></div>'
+               +'<div class="form-group col-md-2"><input type="text" placeholder="資料夾說明" class="form-control" id="datafolderDescription"></div>'
+               +'<div class="form-group col-md-1"><button type="button" class="btn btn-success" name="plus">+</button></div>')
+           }else{
+
+           }
+        });
+      
+
+    </script>
+</body>
+</html>
