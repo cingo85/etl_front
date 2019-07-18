@@ -65,45 +65,37 @@
                                     <div class="ibox-title">
                                         <div class="row">
                                             <div class="col-lg-6">
-                                                    <h2>嘉義大學第三期</h2>
+                                                    <h2>嘉義大學第三期統計表(專案名變數)</h2>
                                             </div>
                                             <div class="col-lg-6">
-                                                    <button type="button" class="btn btn-primary" style="margin-left: 850px" onclick="location.href='./index.html'">回專案清單</button>
+                                                    <button type="button" class="btn btn-primary" style="margin-left: 850px" onclick="location.href='./project.html'">回專案清單</button>
                                             </div>
+                                        </div>  
+                                    </div> 
+                                      
+                                    <div class="ibox-content">
+                                        <div class="row">
+                                               <h2>資料統計表</h2>
                                         </div>
                                         <div class="row">    
                                             <div class="col-lg-3">
-                                                <button type="button" class="btn btn-primary">資料統計表</button>
-                                                <button type="button" class="btn btn-primary">匯出設定檔</button>
-                                                <button type="button" class="btn btn-primary">編輯基本資料</button>
+                                                <button type="button" class="btn btn-primary">匯入CSV</button>
+                                                <button type="button" class="btn btn-primary">匯出</button>
                                             </div>
-                                        </div>    
-                                    </div>
-                                    <div class="ibox-content">
-                                        <div class="row">
-                                            <div class="col-lg-12" style="padding-left:500px">資料來源:</div>
-                                            <div class="col-lg-12" style="padding-left:557px">SQL 139.125.222.89</div>
-                                            <div class="col-lg-12" style="padding-left:557px">CSV 139.125.222.89</div>
-                                        </div>
-                                        <div class="row">   
-                                            <div class="col-lg-4"  style="padding-left:500px">保固期限:</div>
-                                            <div class="col-lg-2" >2017/03/07</div>
-                                            <div class="col-lg-1">驗收日期:</div>
-                                            <div class="col-lg-5">2017/03/07</div>
-                                        </div>    
-                                            <div class="col-lg-12" style="padding-left:485px">備註:</div>
-                                        </div>    
-                                    </div>   
-                                    <div class="ibox-content">
-                                        <div class="row">
-                                               <h3 style="margin-left: 650px">DS表格清單</h3><input type="text" style="margin-right: 100px;margin-left:30px;width: 30%" xclass="form-control col-lg-6" id="filter" placeholder="Search">
-                                        </div>
+                                        </div>  
                                         <div style="margin: 5px"></div>
-                                        <table class="footable table" data-filter=#filter style="margin:auto;width: 50%">
+                                        <table class="footable table" data-filter=#filter>
                                             <thead>
                                             <tr>
-                                                <th>表單名稱</th>
-                                                <th>版本</th>
+                                                <th>資料原</th>
+                                                <th>資料庫</th>
+                                                <th>表單</th>
+                                                <th>資料筆數</th>
+                                                <th>欄位數量</th>
+                                                <th>是否串接</th>
+                                                <th>資料描述</th>
+                                                <th>未串接原因</th>
+                                                <th>備註</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -129,82 +121,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>   
-          
-                   
-        <div id="modal-form" class="modal fade bd-modal-lg" aria-hidden="true" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                       <h3 class="m-t-none m-b">建立新專案</h3>
-                       <form class="form-inline">
-                            
-                                <div class="form-group col-md-2">
-                                        <label for="staticEmail2">專案名稱</label>
-                                </div>
-                                <div class="form-group col-md-4">
-                                        <label for="inputPassword2" class="sr-only"></label>
-                                        <input type="text" class="form-control" id="inputPassword2">
-                                </div>
-                                <div class="form-group col-md-2">
-                                        <label for="staticEmail2">客戶名稱</label>
-                                </div>
-                                <div class="form-group col-md-4">
-                                        <label for="inputPassword2" class="sr-only"></label>
-                                        <input type="text" class="form-control" id="inputPassword2">
-                                </div>
-                     
-                              
-                                <div class="form-group col-md-2">
-                                        <label for="staticEmail2">驗收日期</label>
-                                </div>
-                                <div class="form-group col-md-4">
-                                        <div class="input-group date">
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="date" class="form-control" value="03/04/2014">
-                                        </div>
-                                </div>
-                                <div class="form-group col-md-2">
-                                        <label for="staticEmail2">保固期限</label>
-                                </div>
-                                <div class="form-group col-md-4">
-                                        <div class="input-group date">
-                                                <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="date" class="form-control" value="03/04/2014">
-                                        </div>
-                                </div>
-                           
-                             
-                                <div class="form-group col-md-2">
-                                        <label for="staticEmail2">資料來源</label>
-                                </div>
-                                <div id="selectdatasourceDiv" class="form-group col-md-10" >
-                                        <label for="inputPassword2" class="sr-only"></label>
-                                        <select class="custom-select" id="datasource">
-                                            <option value="">請選擇</option>
-                                            <option value="database">資料庫</option>
-                                            <option value="datafolder">資料夾</option>
-                                        </select>
-                                </div>
-                        
-                            
-                                <div class="form-group col-md-2">
-                                        <label for="staticEmail2">備註</label>
-                                </div>
-                                <div class="form-group col-md-10">
-                                        <label for="inputPassword2" class="sr-only">Password</label>
-                                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="2"></textarea>
-                                </div>
-
-                                <div class="form-group row">
-                                        <div class="col-sm-4 col-sm-offset-2">
-                                            <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
-                                        </div>
-                                </div>
-                            
-                        </form>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>        
         <div class="footer">
             <div>
                 <strong>Copyright</strong> Example Company &copy; 2014-2018
